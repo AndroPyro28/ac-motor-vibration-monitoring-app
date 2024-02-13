@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #db2b39;
+  --textColor: #eee;
+}
+
+.App {
+  display: flex;
+}
+
+.navbar {
+  height: 100vh;
+  width: 200px;
+  background-color: #29335c;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: auto;
+}
+
+nav ul li {
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.content {
+  flex: 1;
+  padding: 20px;
+}

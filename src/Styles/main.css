@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #db2b39;
+  --textColor: #eee;
+}
+
+.logo-img {
+	width: 70px; /* Adjust the width as needed */
+	height: 70px; /* Maintain the aspect ratio */
+  }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+}
+
+nav a {
+  margin: 0 1rem;
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--secondaryColor);
+}
+
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+  
+}
+
+header div,
+nav {
+  display: flex;
+  align-items: center;
+  
+}
+
+@media only screen and (max-width: 1024px) {
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header nav {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--mainColor);
+    transition: 1s;
+    
+  }
+
+  header .responsive_nav {
+    transform: translateY(100vh);
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+
+}
+
+/* Add the styles for the Getting Started button and the sign-in form here */
+
+.get-started-btn {
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  border: 2px solid white;
+  border-radius: 14px;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 1em;
+  transition: box-shadow 0.3s ease;
+}
+.get-started-btn:hover {
+	border-color: red;
+  }
+
+
+  .centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/src/pic1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  
+  .centered-form form {
+	width: 300px; /* Adjust the width as needed */
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+  }
+  
+  .centered-form h2 {
+	margin-top: 0;
+  }
+  
+  .centered-form .form-group {
+	margin-bottom: 15px;
+  }
+  
+  .centered-form label {
+	display: block;
+	margin-bottom: 5px;
+  }
+  
+  .centered-form input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+  }
+  
+  .centered-form button {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 3px;
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+  }
+  
+  .centered-form button:hover {
+	background-color: #0056b3;
+  }
+  .sign-in-form {
+	background-color: #f5f5f5; /* Set background color */
+	border-radius: 10px; /* Add border radius */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+	padding: 20px; /* Add padding */
+  
+
+  }
+  
+  /* Style for input fields */
+  .sign-in-form .form-group {
+	margin-bottom: 15px;
+  }
+  
+  /* Style for the login button */
+  .sign-in-form button[type="submit"] {
+	background-color: #29335c; /* Set background color */
+	color: white; /* Set text color */
+	border: none; /* Remove border */
+	border-radius: 5px; /* Add border radius */
+	padding: 10px 20px; /* Add padding */
+	cursor: pointer; /* Change cursor on hover */
+	transition: background-color 0.3s ease; /* Add transition effect */
+  }
+  
+  /* Hover effect for the login button */
+  .sign-in-form button[type="submit"]:hover {
+	background-color: #1a2243; /* Change background color on hover */
+  }
+  .sign-up-form form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 120px;
+  }
+  
+  .sign-up-form form div {
+	margin-bottom: 2px; /* Add space between each input field */
+  }
+  
+  .sign-up-form form input {
+	width: 350px; /* Adjust width as needed */
+	padding: 15px; /* Add padding for better appearance */
+	margin-bottom: 10px; /* Add space between input and label */
+  }
+  
+  .sign-up-form form button {
+	width: 350px; /* Adjust width as needed */
+	padding: 15px; /* Add padding for better appearance */
+	background-color:#29335c ;
+  }
+  .sign-up-form form button:hover {
+	background-color:#29335c ; /* Keep the background color same on hover */
+  }
+  .notification {
+    position: fixed; /* Position the notification */
+    top: 200px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    color: #29335c; /* White text color */
+    text-align: center; /* Center-align text */
+    padding: 15px; /* Add padding */
+    margin-bottom: 20px; /* Add margin to separate from other elements */
+    width: 350px;
+  }
+  
+  /* Additional styling for specific notifications */
+  .notification.error {
+    background-color: #f44336; /* Red background color */
+  }
+  
+  .notification.success {
+    background-color: #F5F5F5; /* Green background color */
+  }
+  .page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 20px;
+}
+.page, .background {
+  background-image: url('/src/pic1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.page1 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.background {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+  .description {
+    text-align: center;
+  }
+  
+  .description h2 {
+    color: #29335c;
+    margin-bottom: 10px; /* Reduced margin bottom */
+    background-color: white;
+  }
+  
+  .feature {
+    margin-bottom: 20px; /* Reduced margin bottom */
+    padding: 50px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    width: 1200px;
+  }
+  
+  .feature h3 {
+    color: #29335c;
+    margin-bottom: 8px; /* Reduced margin bottom */
+  }
+  
+  .feature p {
+    color: #555;
+    margin-bottom: 8px; /* Reduced margin bottom */
+  }
+  
+  .feature a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .feature a:hover {
+    text-decoration: underline;
+  }
+  .feature-gif {
+    width: 400px; /* Adjust width as needed */
+    margin-right: 20px; /* Add space between image and description */
+  }
