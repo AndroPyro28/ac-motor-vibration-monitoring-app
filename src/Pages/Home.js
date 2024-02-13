@@ -1,9 +1,12 @@
 import React from 'react'
 import '../Styles/home.css'
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+	const navigate = useNavigate()
 	const handleSignOut = () => {
 		localStorage.removeItem("acmotor-user");
+		navigate("/");
 	};
 	return (
 		<div className="App">
