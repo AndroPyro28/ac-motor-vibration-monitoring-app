@@ -2,6 +2,9 @@ import React from 'react'
 import '../Styles/home.css'
 
 function Home() {
+	const handleSignOut = () => {
+		localStorage.removeItem("acmotor-user");
+	};
 	return (
 		<div className="App">
 			<div className="navbar">
@@ -30,6 +33,9 @@ function Home() {
 							</li>
 							<li>
 								<a href="#">Get Help</a>
+							</li>
+							<li>
+								<button onClick={handleSignOut}>Log out</button>
 							</li>
 						</ul>
 					</nav>

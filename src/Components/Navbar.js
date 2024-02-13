@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
 import logoImage from "./logo.png";
 
-const Navbar = ({ toggleSignInForm }) => {
+const Navbar = ({ toggleSignInForm, logedUser }) => {
   const [showNavbar, setShowNavbar] = useState(false); // Define showNavbar state
   const navRef = useRef(null); // Define navRef
 
@@ -33,9 +33,9 @@ const Navbar = ({ toggleSignInForm }) => {
         <FaBars />
       </button>
       <button className="get-started-btn" onClick={toggleSignInForm}>
-        Get Started
+        {logedUser ? logedUser : "Get Started"}
       </button>
-      
+
     </header>
   );
 };

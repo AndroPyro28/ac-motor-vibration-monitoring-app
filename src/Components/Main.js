@@ -15,10 +15,16 @@ function Main() {
   const [showSignInForm, setShowSignInForm] = useState(false);
   const [showSignUpForm, setShowSignUpForm] = useState(false);
   const [signInError, setSignInError] = useState(false);
+  const [logedUser, setlogedUser] = useState(false);
   const auth = getAuth(firebaseApp);
   const db = getFirestore(firebaseApp);
 
-  
+  useEffect(() => {
+    const storedEmail = localStorage.getItem("acmotor-user");
+    if (storedEmail) {
+      setlogedUser(storedEmail);
+    }
+  }, []);
 
   const toggleSignInForm = () => {
     setShowSignInForm(!showSignInForm);
@@ -37,33 +43,33 @@ function Main() {
 
   const handleSignInSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       // Sign in with email and password
       await signInWithEmailAndPassword(auth, e.target.email.value, e.target.password.value);
-  
+
       // Successful sign-in logic
       // ...
-  
+
     }
     catch (error) {
       console.error('Error during sign-in: ', error);
-    
+
       if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
         // Set signInError to true for user not found or wrong password
         setSignInError(true);
       }
     }
   };
-  
+
 
   return (
     <div>
-      <Navbar toggleSignInForm={toggleSignInForm}/>
+      <Navbar logedUser={logedUser} toggleSignInForm={toggleSignInForm} />
       {showSignInForm && <SignInForm />}
       {showSignUpForm && <SignUpForm toggleSignInForm={toggleSignInForm} />} {/* Pass toggleSignInForm to SignUpForm */}
-      <Page/>
-      <Page1/>
+      <Page />
+      <Page1 />
       <Notification />
     </div>
   );

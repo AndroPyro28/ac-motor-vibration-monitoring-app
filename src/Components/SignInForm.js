@@ -32,6 +32,7 @@ function SignInForm() {
       const userPassword = userDoc.data().password;
 
       if (userPassword === password) {
+        localStorage.setItem("acmotor-user", email);
         navigate("/home");
       } else {
         alert("Password incorrect");
