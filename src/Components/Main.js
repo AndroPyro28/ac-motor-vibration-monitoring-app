@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/main.css";
 import { firebaseApp } from '../firebase';
 import 'firebase/firestore';
