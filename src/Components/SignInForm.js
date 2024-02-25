@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import { getAuth } from "firebase/auth";
 import { firebaseApp } from "../firebase";
-import SignUpForm from "./SignUpForm"; // Import the SignUpForm component
+import SignUpForm from "./SignUpForm"; 
 import "../Styles/main.css";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,7 @@ function SignInForm() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showSignUp, setShowSignUp] = useState(false); // State to manage whether to show the sign-up form
+  const [showSignUp, setShowSignUp] = useState(false); 
 
   const navigate = useNavigate()
 
@@ -24,7 +24,7 @@ function SignInForm() {
     try {
       const userQuerySnapshot = await getDocs(query(collection(db, "users"), where("email", "==", email)));
       if (userQuerySnapshot.empty) {
-        alert("Email not found!");
+        alert("Email or password is incorrect! Please try again.");
         return;
       }
 
@@ -35,14 +35,14 @@ function SignInForm() {
         localStorage.setItem("acmotor-user", email);
         navigate("/home");
       } else {
-        alert("Password incorrect");
+        alert("Email or password is incorrect! Please try again.");
       }
     } catch (error) {
       console.error("Error during sign-in: ", error);
       if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
-        alert("Email not found or wrong password");
+        alert("Email or password is incorrect! Please try again.");
       } else {
-        // Handle other errors
+
       }
     }
   };
@@ -50,7 +50,7 @@ function SignInForm() {
   return (
     <div className="centered-form" style={{ backgroundImage: "url('/src/pic1.jpg');" }}>
       {showSignUp ? (
-        <SignUpForm /> // Render the SignUpForm component if showSignUp is true
+        <SignUpForm /> 
       ) : (
         <div className="form-container" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <form onSubmit={handleSignInSubmit} style={{ width: "400px", padding: "20px", backgroundColor: "white", borderRadius: "10px", marginBottom: "120px" }}>

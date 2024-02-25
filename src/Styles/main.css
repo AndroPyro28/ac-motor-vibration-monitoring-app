@@ -15,8 +15,8 @@
 }
 
 .logo-img {
-	width: 70px; /* Adjust the width as needed */
-	height: 70px; /* Maintain the aspect ratio */
+	width: 70px; 
+	height: 70px; 
   }
 header {
   display: flex;
@@ -94,7 +94,6 @@ nav {
 
 }
 
-/* Add the styles for the Getting Started button and the sign-in form here */
 
 .get-started-btn {
   background-color: var(--mainColor);
@@ -125,7 +124,7 @@ nav {
 
   
   .centered-form form {
-	width: 300px; /* Adjust the width as needed */
+	width: 300px; 
 	padding: 20px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -166,33 +165,31 @@ nav {
 	background-color: #0056b3;
   }
   .sign-in-form {
-	background-color: #f5f5f5; /* Set background color */
-	border-radius: 10px; /* Add border radius */
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
-	padding: 20px; /* Add padding */
+	background-color: #f5f5f5;
+	border-radius: 10px; 
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+	padding: 20px; 
   
 
   }
-  
-  /* Style for input fields */
+
   .sign-in-form .form-group {
 	margin-bottom: 15px;
   }
   
-  /* Style for the login button */
+
   .sign-in-form button[type="submit"] {
-	background-color: #29335c; /* Set background color */
-	color: white; /* Set text color */
-	border: none; /* Remove border */
-	border-radius: 5px; /* Add border radius */
-	padding: 10px 20px; /* Add padding */
-	cursor: pointer; /* Change cursor on hover */
-	transition: background-color 0.3s ease; /* Add transition effect */
+	background-color: #29335c; 
+	color: white; 
+	border: none; 
+	border-radius: 5px; 
+	padding: 10px 20px; 
+	cursor: pointer; 
+	transition: background-color 0.3s ease; 
   }
   
-  /* Hover effect for the login button */
   .sign-in-form button[type="submit"]:hover {
-	background-color: #1a2243; /* Change background color on hover */
+	background-color: #1a2243; 
   }
   .sign-up-form form {
 	display: flex;
@@ -202,42 +199,42 @@ nav {
   }
   
   .sign-up-form form div {
-	margin-bottom: 2px; /* Add space between each input field */
+	margin-bottom: 2px;
   }
   
   .sign-up-form form input {
-	width: 350px; /* Adjust width as needed */
-	padding: 15px; /* Add padding for better appearance */
-	margin-bottom: 10px; /* Add space between input and label */
+	width: 350px; 
+	padding: 15px;
+	margin-bottom: 10px; 
   }
   
   .sign-up-form form button {
-	width: 350px; /* Adjust width as needed */
-	padding: 15px; /* Add padding for better appearance */
+	width: 350px; 
+	padding: 15px; 
 	background-color:#29335c ;
   }
   .sign-up-form form button:hover {
-	background-color:#29335c ; /* Keep the background color same on hover */
+	background-color:#29335c ; 
   }
   .notification {
-    position: fixed; /* Position the notification */
-    top: 200px; /* Distance from the top */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    color: #29335c; /* White text color */
-    text-align: center; /* Center-align text */
-    padding: 15px; /* Add padding */
-    margin-bottom: 20px; /* Add margin to separate from other elements */
+    position: fixed; 
+    top: 200px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: #29335c;
+    text-align: center;
+    padding: 15px; 
+    margin-bottom: 20px; 
     width: 350px;
   }
   
-  /* Additional styling for specific notifications */
+
   .notification.error {
-    background-color: #f44336; /* Red background color */
+    background-color: #f44336;
   }
   
   .notification.success {
-    background-color: #F5F5F5; /* Green background color */
+    background-color: #F5F5F5;
   }
   .page {
     min-height: 100vh;
@@ -281,13 +278,13 @@ nav {
   
   .description h2 {
     color: #29335c;
-    margin-bottom: 10px; /* Reduced margin bottom */
+    margin-bottom: 10px; 
     background-color: white;
   }
   
   .feature {
-    margin-bottom: 20px; /* Reduced margin bottom */
-    padding: 50px; /* Reduced padding */
+    margin-bottom: 20px;
+    padding: 50px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: white;
@@ -296,12 +293,12 @@ nav {
   
   .feature h3 {
     color: #29335c;
-    margin-bottom: 8px; /* Reduced margin bottom */
+    margin-bottom: 8px;
   }
   
   .feature p {
-    color: #555;
-    margin-bottom: 8px; /* Reduced margin bottom */
+    color: black;
+    margin-bottom: 8px;
   }
   
   .feature a {
@@ -314,6 +311,7 @@ nav {
     text-decoration: underline;
   }
   .feature-gif {
-    width: 400px; /* Adjust width as needed */
-    margin-right: 20px; /* Add space between image and description */
+    width: 400px;
+    margin-right: 20px;
   }
+ 

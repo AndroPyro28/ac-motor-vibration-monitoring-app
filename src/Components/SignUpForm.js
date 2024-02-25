@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getFirestore, collection, addDoc, getDocs, query, where } from 'firebase/firestore';
-import { SignUpSuccessNotification } from "./Notification.js"; // Import your notification component
+import { SignUpSuccessNotification } from "./Notification.js"; 
 
 const SignUpForm = ({ showSignUpForm }) => {
   const [name, setName] = useState("");
@@ -10,7 +10,7 @@ const SignUpForm = ({ showSignUpForm }) => {
   const [error, setError] = useState(null);
   const [emailExistsError, setEmailExistsError] = useState(null);
   const [passwordMatchError, setPasswordMatchError] = useState(null);
-  const [showSuccessNotification, setShowSuccessNotification] = useState(false); // State to control the display of success notification
+  const [showSuccessNotification, setShowSuccessNotification] = useState(false); 
   const [successMessage, setSuccessMessage] = useState("");
 
   // Initialize Firestore
@@ -43,30 +43,30 @@ const SignUpForm = ({ showSignUpForm }) => {
       
       console.log("Document written with ID: ", docRef.id);
 
-      // Clear form fields
+    
       setName("");
       setEmail("");
       setPassword("");
       setConfirmPassword("");
-      setError(null); // Clear any previous errors
-      setEmailExistsError(null); // Clear email existence error
-      setPasswordMatchError(null); // Clear password match error
-      setSuccessMessage("Sign up successful!"); // Set success message
-      setShowSuccessNotification(true); // Show success notification
+      setError(null); 
+      setEmailExistsError(null); 
+      setPasswordMatchError(null); 
+      setSuccessMessage("Sign up successful!"); 
+      setShowSuccessNotification(true); 
     } catch (error) {
       setError(error.message);
     }
   };
 
   useEffect(() => {
-    // Set a timeout to hide the success notification after 5 seconds
+
     if (showSuccessNotification) {
       const timeout = setTimeout(() => {
         setShowSuccessNotification(false);
-        setSuccessMessage(""); // Clear success message
+        setSuccessMessage(""); 
       }, 3000);
 
-      // Clean up the timeout to avoid memory leaks
+
       return () => clearTimeout(timeout);
     }
   }, [showSuccessNotification]);

@@ -6,7 +6,7 @@ const auth = getAuth(firebaseApp);
 const signInWithEmailAndPassword = async (email, password) => {
   try {
     await signIn(auth, email, password);
-    // Successful sign-in logic
+
     return null;
   } catch (error) {
     console.error('Error during sign-in: ', error);

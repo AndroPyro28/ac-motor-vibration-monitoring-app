@@ -10,6 +10,7 @@ import SignUpForm from "./SignUpForm";
 import Notification from "./Notification";
 import Page from "./Page"
 import Page1 from "./Page1";
+import Page2 from "./Page2";
 
 function Main() {
   const [showSignInForm, setShowSignInForm] = useState(false);
@@ -28,12 +29,12 @@ function Main() {
 
   const toggleSignInForm = () => {
     setShowSignInForm(!showSignInForm);
-    setShowSignUpForm(false); // Close sign-up form when opening sign-in form
+    setShowSignUpForm(false); 
   };
 
   const toggleSignUpForm = () => {
     setShowSignUpForm(!showSignUpForm);
-    setShowSignInForm(false); // Close sign-in form when opening sign-up form
+    setShowSignInForm(false); 
   };
 
   const closeForms = () => {
@@ -45,18 +46,17 @@ function Main() {
     e.preventDefault();
 
     try {
-      // Sign in with email and password
+    
       await signInWithEmailAndPassword(auth, e.target.email.value, e.target.password.value);
 
-      // Successful sign-in logic
-      // ...
+     
 
     }
     catch (error) {
       console.error('Error during sign-in: ', error);
 
       if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
-        // Set signInError to true for user not found or wrong password
+  
         setSignInError(true);
       }
     }
@@ -67,9 +67,10 @@ function Main() {
     <div>
       <Navbar logedUser={logedUser} toggleSignInForm={toggleSignInForm} />
       {showSignInForm && <SignInForm />}
-      {showSignUpForm && <SignUpForm toggleSignInForm={toggleSignInForm} />} {/* Pass toggleSignInForm to SignUpForm */}
+      {showSignUpForm && <SignUpForm toggleSignInForm={toggleSignInForm} />} 
       <Page />
       <Page1 />
+      <Page2 />
       <Notification />
     </div>
   );
