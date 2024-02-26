@@ -77,7 +77,7 @@ function Home() {
         </nav>
       </div>
       {/* <div className="content"> */}
-      <Canvas
+      {/* <Canvas
       frameloop="demand"
       shadows
       className="cursor-grab active:cursor-grabbing"
@@ -95,9 +95,9 @@ function Home() {
       <directionalLight position={[10, 5, 0]} />
       <directionalLight position={[-10, 5, 0]} />
       <directionalLight position={[10, -5, 0]} />
-    </Canvas>
+    </Canvas> */}
+   <iframe className="iframe" src="https://g-1f0458ba2f.grafana-workspace.ap-southeast-2.amazonaws.com/dashboard-solo/snapshot/h6Td2BiA0C8mAbJkeLSM6SPSelnQr7gT?fbclid=IwAR2bdNKn9GdguAw4NLLqNRp1Bm5Zrtl0dkc1PfLpKbXkg33tGqmCGtwaIec&orgId=0&refresh=5s&from=1708846662334&to=1708868262334&panelId=2" width="450" height="200" frameborder="0"></iframe>
     {/* </div> */}
-       
     </div>
   );
 }
